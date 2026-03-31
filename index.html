@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AlymChems | Alymbek Datke lyceum</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {margin:0;padding:0;box-sizing:border-box;}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+    display:flex;
+    justify-content:space-between;
+    padding:20px 50px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+}
+
+.logo {font-weight:600;font-size:20px;}
+
+nav a {
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:0.3s;
+}
+nav a:hover {color:#38bdf8;}
+
+/* HERO */
+.hero {
+    text-align:center;
+    padding:120px 20px;
+    position:relative;
+}
+
+/* floating bubbles */
+.bubble {
+    position:absolute;
+    border-radius:50%;
+    background:rgba(56,189,248,0.2);
+    animation: float 8s infinite ease-in-out;
+}
+.bubble:nth-child(1){width:60px;height:60px;left:10%;top:80%;}
+.bubble:nth-child(2){width:100px;height:100px;left:80%;top:70%;animation-delay:2s;}
+.bubble:nth-child(3){width:40px;height:40px;left:50%;top:90%;animation-delay:4s;}
+
+@keyframes float {
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-80px);}
+    100%{transform:translateY(0);}
+}
+
+.hero h1 {
+    font-size:50px;
+}
+
+.hero p {
+    color:#94a3b8;
+    margin:15px 0 30px;
+}
+
+.btn {
+    padding:20px 40px;
+    background:#2563eb;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    color:white;
+    transition:0.3s;
+    font-size: 20px;
+    margin: 5px;  
+}
+.btn:hover {transform:scale(1.05);background:#1d4ed8;}
+
+/* SECTION */
+.section {
+    padding:70px 40px;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* CARDS */
+.cards {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card {
+    background:rgba(255,255,255,0.05);
+    padding:25px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    transition:0.4s;
+    cursor:pointer;
+}
+.card:hover {
+    transform:translateY(-10px) scale(1.02);
+}
+
+.card h3 {margin-bottom:10px;}
+.card p {color:#94a3b8;font-size:14px;}
+
+/* INFO BLOCK */
+.info {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+    margin-top: 50px;
+}
+
+.info img {
+    width:100%;
+    max-width: 450%;
+    height: auto;
+    justify-self: center;
+    border-radius:20px;
+}
+
+/* FOOTER */
+footer {
+    text-align:center;
+    padding:30px;
+    background:rgba(255,255,255,0.05);
+}
+.big-label {
+    font-size: 80px;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    margin-bottom: 40px;
+    user-select: none;
+}
+/* responsive */
+@media(max-width:800px){
+    .info {grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="logo">AlymChems</div>
+    <div>
+        <h4>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#chapters">Learn</a>
+        </h4>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+    <h1>Local chemistry learning school website</h1>
+    <h3><p>Alymbek Datka Lyceum</p></h3>
+    <!--<button class="btn" onclick="document.getElementById('features').scrollIntoView()"><h3>Explore</h3></button>-->
+</secti on>
+
+<!-- ABOUT SCHOOL -->
+<section class="section info" id="about">
+    <div>
+        <h2>About Our School</h2>
+        <p>
+            Alymbek datka lyceum, is one of the leading educational institutions focused on modern science education.
+        </p>
+
+        <p style="margin-top:15px;">
+            Chemistry plays a key role in our academic program, helping students develop analytical thinking, creativity, and scientific curiosity.
+        </p>
+    </div>
+
+    <img src="img_chem.jpg" alt="school" style="max-width: 350px; height: auto; justify-self: center;">
+</section> <section class="section info">
+    <img src="https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6" alt="lab" style="max-width: 350px; height: auto; justify-self: center;">
+
+    <div>
+        <h2>Chemistry Classes</h2>
+        <p>
+            Our chemistry lessons combine theory with practice. Students perform real experiments, work in laboratories, and explore chemical reactions in a safe environment.
+        </p>
+
+        <p style="margin-top:15px;">
+            Topics include organic chemistry, periodic table, reactions, and modern scientific applications.
+        </p>
+    </div>
+</section>
+<!-- ACTIVITIES -->
+<section class="section">
+    <h2 style="text-align:center;margin-bottom:30px;">Activities & Projects</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>🧪 Lab Experiments</h3>
+            <p>Hands-on experiments that bring chemistry to life</p>
+        </div>
+
+        <div class="card">
+            <h3>🏆 Competitions</h3>
+            <p>Participation in олимпиады and science contests</p>
+        </div>
+
+        <div class="card">
+            <h3>🔬 Research Projects</h3>
+            <p>Students create their own chemistry projects</p>
+        </div>
+
+        <div class="card">
+            <h3>🌍 Science Fairs</h3>
+            <p>Presenting innovative ideas and experiments</p>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+    <h2 style="text-align:center;margin-bottom:30px;">Platform Features</h2>
+
+    <div class="cards">
+
+        <div class="card" onclick="location.href='games.html'">
+            <h3>🎮 Games</h3>
+            <p>Interactive chemistry games</p>
+        </div>
+
+        <div class="card" onclick="location.href='tests.html'">
+            <h3>📝 Tests</h3>
+            <p>Check your knowledge</p>
+        </div>
+
+        <div class="card" onclick="location.href='quiz.html'">
+            <h3>❓ Quizzes</h3>
+            <p>Topic-based quizzes</p>
+        </div>
+
+        <div class="card" onclick="location.href='https://marslqp.github.io/sema-chemistry/'">
+            <h3>👩‍🏫 Teachers</h3>
+            <p>Meet our chemistry teachers</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section class="section" id="chapters">
+    <h1 class="big-label">LEARN</h1>
+
+    <h3 style="text-align: center; margin-bottom: 30px;">Chapters & Topics</h3>
+
+    <!-- Grade buttons -->
+    <div style="text-align:center; margin-bottom:30px;">
+        <h2>
+            <button class="btn" onclick="showGrade(7)">Grade 7</button>
+            <button class="btn" onclick="showGrade(8)">Grade 8</button>
+            <button class="btn" onclick="showGrade(9)">Grade 9</button>
+        </h2>
+    </div>
+
+    <!-- Topics container -->
+    <div id="topics" class="cards"></div>
+</section>
+
+<script>
+const data = {
+    7: [
+        {name: "Introduction to Chemistry", link: "https://www.youtube.com/results?search_query=introduction+to+chemistry"},
+        {name: "States of Matter", link: "https://www.youtube.com/results?search_query=states+of+matter+chemistry"},
+        {name: "Atoms and Molecules", link: "https://www.youtube.com/results?search_query=atoms+and+molecules"},
+        {name: "Periodic Table Basics", link: "https://www.youtube.com/results?search_query=periodic+table+basics"}
+    ],
+
+    8: [
+        {name: "Chemical Reactions", link: "https://www.youtube.com/results?search_query=chemical+reactions"},
+        {name: "Acids and Bases", link: "https://www.youtube.com/results?search_query=acids+and+bases"},
+        {name: "Metals and Nonmetals", link: "https://www.youtube.com/results?search_query=metals+and+nonmetals"},
+        {name: "Solutions", link: "https://www.youtube.com/results?search_query=solutions+chemistry"}
+    ],
+
+    9: [
+        {name: "Organic Chemistry Basics", link: "https://www.youtube.com/results?search_query=organic+chemistry+basics"},
+        {name: "Electrochemistry", link: "https://www.youtube.com/results?search_query=electrochemistry"},
+        {name: "Chemical Bonding", link: "https://www.youtube.com/results?search_query=chemical+bonding"},
+        {name: "Stoichiometry", link: "https://www.youtube.com/results?search_query=stoichiometry"}
+    ]
+};
+
+function showGrade(grade) {
+    const container = document.getElementById("topics");
+    container.innerHTML = "";
+
+    data[grade].forEach(topic => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        card.innerHTML = `
+            <h3>${topic.name}</h3>
+            <p>Click to watch explanation</p>
+        `;
+
+        card.onclick = () => {
+            window.open(topic.link, "_blank");
+        };
+
+        container.appendChild(card);
+    });
+}
+</script>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 AlymChems | Alymbek Datka School</p>
+    <p>Email: alymbekdatka@school.com | Phone: +996 555 555 555</p>
+</footer>
+
+</body>
+</html>
